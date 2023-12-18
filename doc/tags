@@ -1,2 +1,6 @@
+harpoon-config	harpoon.txt	/*harpoon-config*
+harpoon-highlight-groups	harpoon.txt	/*harpoon-highlight-groups*
+harpoon-logger	harpoon.txt	/*harpoon-logger*
+harpoon-settings	harpoon.txt	/*harpoon-settings*
 harpoon-table-of-contents	harpoon.txt	/*harpoon-table-of-contents*
 harpoon.txt	harpoon.txt	/*harpoon.txt*
