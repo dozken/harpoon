@@ -1,0 +1,24 @@
+name: Docs
+
+on: [push, pull_request]
+
+jobs:
+    docs:
+        name: Auto generate docs
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: kdheepak/panvimdoc@main
+              with:
+                vimdoc: harpoon
+                pandoc: DOC.md
+            - run: |
+                sudo add-apt-repository ppa:neovim-ppa/stable
+                sudo apt-get update
+                sudo apt-get install -y neovim
+                nvim +"helptags doc | exit"
+
+            - uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                commit_message: "Auto generate docs"
